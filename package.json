@@ -15,5 +15,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/3lXample/example-angularjs-component.git"
+  },
+  "dependencies": {
+    "angular": "1.6.5",
+    "bootstrap": "4.0.0-beta",
+    "jquery": "3.2.1",
+    "popper.js": "1.12.2"
   }
 }
