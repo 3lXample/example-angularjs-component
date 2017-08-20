@@ -34,6 +34,38 @@
     }
   });
 
+  // component for app nav
+  module.component('appNav', {
+    template:
+      // inline template
+      // we can also use templateUrl for external template
+      // ex: `templateUrl: 'template.html'`
+      // templateUrl will be relative from current page url if not use absolute url path
+      '<nav>' +
+      '  <h2 class="sr-only">Navigation</h2>' +
+      '  <ul class="nav nav-tabs">' +
+      '    <li class="nav-item" ng-repeat="menu in $ctrl.menus">' +
+      '      <a class="nav-link" ng-class={active:menu.active} ng-href="{{menu.href}}">' +
+      '        <img ng-if="menu.icon" ng-src="{{menu.icon}}" width="20" height="20" alt="{{menu.iconAlt}}"> {{menu.text}}' +
+      '      </a>' +
+      '    </li>' +
+      '  </ul>' +
+      '</nav>',
+    bindings: {
+      // Should be bind from parent
+      // menus is an array of object menu
+      // Example:
+      //   menus = [{
+      //     href    : '.',
+      //     active  : true,
+      //     text    : '',
+      //     icon    : '_assets/3lXample_icon-20x20.png',
+      //     iconAlt : 'home'
+      //   }]
+      menus: '<'
+    }
+  });
+
   // component for app footer
   module.component('appFooter', {
     template:
