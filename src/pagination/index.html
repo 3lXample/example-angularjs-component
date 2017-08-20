@@ -32,6 +32,7 @@
   <script src="../_app/controller.js"></script>
   <script src="../_app/provider.js"></script>
   <script src="../_app/filter.js"></script>
+  <script src="../_components/userListComponent.js"></script>
   <!-- Page JS -->
   <script src="controller.js"></script>
 </head>
@@ -40,7 +41,14 @@
   <app-nav menus="navMenus"></app-nav>
   <app-main>
     <main ng-controller="paginationController">
-      <app-home></app-home>
+      <app-user-list
+        title="title"
+        menus="menus"
+        info="info"
+        users="users"
+        value="page"
+        on-click-menu="onClickMenu(menu)">
+      </app-user-list>
     </main>
   </app-main>
   <app-footer></app-footer>
