@@ -22,7 +22,8 @@
     $scope.headerLogoImgUrl = '_assets/3lXample_logo-160x44.png';
     $scope.navMenus = [
       { href: '.',          active: true,  icon: '_assets/3lXample_icon-20x20.png', iconAlt: 'home' },
-      { href: 'pagination', active: false, text: 'Pagination' }
+      { href: 'pagination', active: false, text: 'Pagination' },
+      { href: 'addition',   active: false, text: 'Addition' }
     ];
   }
 
