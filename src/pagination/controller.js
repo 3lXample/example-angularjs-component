@@ -27,6 +27,8 @@
     $scope.$parent.navMenus[1].active = true;
     $scope.$parent.navMenus[2].href   = '../' + $scope.$parent.navMenus[2].href;
     $scope.$parent.navMenus[2].active = false;
+    $scope.$parent.navMenus[3].href   = '../' + $scope.$parent.navMenus[3].href;
+    $scope.$parent.navMenus[3].active = false;
 
     $scope.title = 'Pagination Example [Component]';
     $scope.menus = ['Previous', 'Next'];
