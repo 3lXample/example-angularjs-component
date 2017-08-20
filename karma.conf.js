@@ -28,7 +28,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'html'],
+    reporters: ['progress', 'html', 'junit'],
 
     // configuration for test html report
     htmlReporter: {
@@ -38,6 +38,20 @@ module.exports = function(config) {
       groupSuites: true,
       useCompactStyle: true,
       useLegacyStyle: true
+    },
+
+    // configuration for test junit report
+    junitReporter: {
+      outputDir: 'reports/karma-junit',
+      outputFile: 'result.xml',
+      suite: 'example-angularjs-component',
+      useBrowserName: false,
+      nameFormatter: function(browser, result) {
+        return result.description;
+      },
+      classNameFormatter: function(browser, result) {
+        return result.suite.join('.');
+      }
     },
 
     // web server port
